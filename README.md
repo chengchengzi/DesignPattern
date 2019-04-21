@@ -15,5 +15,6 @@
 	- 工厂类增加switch分支
 - ![Factory.cpp是入口函数](SimpleFactory/Factory.cpp)
 - 代码类图如下：
+
 	![简单工程类图](images/SimpleFactory.png)
 	
