@@ -15,7 +15,6 @@
 - 当需要增加新的功能时，只需要改动两处，不会对原来已经实现的功能进行改动；
 	- 新增具体功能子类
 	- 工厂类增加switch分支
-- [Factory.cpp是入口函数](SimpleFactory/Factory.cpp)
 - 类图如下：
 	![简单工厂类图](images/简单工厂模式类图.png)
 
