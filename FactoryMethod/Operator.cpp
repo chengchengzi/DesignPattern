@@ -1,12 +1,6 @@
 #include "Operator.h"
 
 
-
-Operator::Operator()
-{
-}
-
-
 Operator::~Operator()
 {
 }
@@ -29,5 +23,11 @@ double Operator::getNumberA()
 double Operator::getNumberB()
 {
 	return numberB;
+}
+
+double Operator::getResult()
+{
+	double result = 0.0;
+	return result;
 }
 

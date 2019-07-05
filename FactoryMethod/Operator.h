@@ -4,11 +4,11 @@
 class Operator
 {
 public:
-	Operator();
+	Operator() :numberA(0.0), numberB(0.0) {};
 	~Operator();
 
-	void setNumberA(double numberA = 0.0);
-	void setNumberB(double numberB = 0.0);
+	void setNumberA(double numberA);
+	void setNumberB(double numberB);
 	double getNumberA();
 	double getNumberB();
 	virtual double getResult() = 0;
