@@ -7,11 +7,11 @@ protected:
 	double num_b;
 
 public:
-	Operator();
+	Operator() :num_a(0.0),num_b(0.0){};
 	~Operator();
 
-	void setNumA(int a = 0);
-	void setNumB(int b = 0);
+	void setNumA(int a);
+	void setNumB(int b);
 	double getNumA();
 	double getNumB();
 	virtual double getResult();
