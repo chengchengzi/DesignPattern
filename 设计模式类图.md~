@@ -1389,8 +1389,7 @@
 		class_attributes 	(list class_attribute_list
 		    (object ClassAttribute "adaptee"
 			quid       	"5D6245B300AB"
-			type       	"Adaptee"
-			quidu      	"5D6245D20273")))
+			type       	"Adaptee")))
 	    (object Class "Adaptee"
 		quid       	"5D6245D20273"
 		operations 	(list Operations
@@ -1400,167 +1399,6 @@
 			concurrency 	"Sequential"
 			opExportControl 	"Public"
 			uid        	0)))
-	    (object Class "RoleStateMemento"
-		quid       	"5D65DC100070"
-		operations 	(list Operations
-		    (object Operation "RoleStateMemento"
-			quid       	"5D65DC5700E8"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "RoleStateMemento"
-			quid       	"5D65DC6E0202"
-			parameters 	(list Parameters
-			    (object Parameter "v"
-				quid       	"5D65DC8B01B3"
-				type       	"int")
-			    (object Parameter "a"
-				quid       	"5D65DC970096"
-				type       	"int")
-			    (object Parameter "d"
-				quid       	"5D65DC9F0347"
-				type       	"int"))
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "setVit"
-			quid       	"5D65DCAD015E"
-			parameters 	(list Parameters
-			    (object Parameter "v"
-				quid       	"5D65DCBF0346"
-				type       	"int"))
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "getVit"
-			quid       	"5D65DCD1001A"
-			result     	"int"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "setAck"
-			quid       	"5D65DCDE0031"
-			parameters 	(list Parameters
-			    (object Parameter "a"
-				quid       	"5D65DCEA0343"
-				type       	"int"))
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "getAck"
-			quid       	"5D65DCFC02CE"
-			result     	"int"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "setDef"
-			quid       	"5D65DD0800C5"
-			parameters 	(list Parameters
-			    (object Parameter "d"
-				quid       	"5D65DD1F02C4"
-				type       	"int"))
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "getDef"
-			quid       	"5D65DD2902FA"
-			result     	"int"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "vit"
-			quid       	"5D65DC2A0304"
-			type       	"int")
-		    (object ClassAttribute "ack"
-			quid       	"5D65DC3C01AE"
-			type       	"int")
-		    (object ClassAttribute "def"
-			quid       	"5D65DC49002E"
-			type       	"int")))
-	    (object Class "GameRole"
-		quid       	"5D65DD490146"
-		used_nodes 	(list uses_relationship_list
-		    (object Uses_Relationship
-			quid       	"5D65DEDF0050"
-			supplier   	"Logical View::RoleStateMemento"
-			quidu      	"5D65DC100070"))
-		operations 	(list Operations
-		    (object Operation "RevoveryState"
-			quid       	"5D65DDC0033B"
-			parameters 	(list Parameters
-			    (object Parameter "memento"
-				quid       	"5D65DE0601B8"
-				type       	"RoleStateMemento"
-				quidu      	"5D65DC100070"))
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "SaveRoleState"
-			quid       	"5D65DE16021F"
-			result     	"RoleStateMemento"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"5D65DC100070")
-		    (object Operation "GetInitState"
-			quid       	"5D65DE34018A"
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "StateDisplay"
-			quid       	"5D65DE42010F"
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0)
-		    (object Operation "Fight"
-			quid       	"5D65DE5B0279"
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "vit"
-			quid       	"5D65DE680212"
-			type       	"int")
-		    (object ClassAttribute "ack"
-			quid       	"5D65DE760324"
-			type       	"int")
-		    (object ClassAttribute "def"
-			quid       	"5D65DE8000D3"
-			type       	"int")))
-	    (object Class "RoleStateManage"
-		quid       	"5D65DD52023E"
-		operations 	(list Operations
-		    (object Operation "getMemento"
-			quid       	"5D65DD5D033C"
-			result     	"RoleStateMemento"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0
-			quidu      	"5D65DC100070")
-		    (object Operation "setMemento"
-			quid       	"5D65DD77034F"
-			parameters 	(list Parameters
-			    (object Parameter "memento"
-				quid       	"5D65DD8400C9"
-				type       	"RoleStateMemento"
-				quidu      	"5D65DC100070"))
-			result     	"void"
-			concurrency 	"Sequential"
-			opExportControl 	"Public"
-			uid        	0))
-		class_attributes 	(list class_attribute_list
-		    (object ClassAttribute "memento"
-			quid       	"5D65DDA70072"
-			type       	"RoleStateMemento"
-			quidu      	"5D65DC100070")))
 	    (object Association "$UNNAMED$0"
 		quid       	"5CF9C6D1019E"
 		roles      	(list role_list
@@ -1847,32 +1685,6 @@
 			quid       	"5D62461602C4"
 			supplier   	"Logical View::Client"
 			quidu      	"5D174DA20261")))
-	    (object Association "$UNNAMED$68"
-		quid       	"5D65DEA202D0"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$69"
-			quid       	"5D65DEA603C9"
-			supplier   	"Logical View::RoleStateMemento"
-			quidu      	"5D65DC100070"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$70"
-			quid       	"5D65DEA603CB"
-			supplier   	"Logical View::GameRole"
-			quidu      	"5D65DD490146"
-			is_aggregate 	TRUE)))
-	    (object Association "$UNNAMED$71"
-		quid       	"5D65DEED03A7"
-		roles      	(list role_list
-		    (object Role "$UNNAMED$72"
-			quid       	"5D65DEF00130"
-			supplier   	"Logical View::RoleStateMemento"
-			quidu      	"5D65DC100070"
-			is_navigable 	TRUE)
-		    (object Role "$UNNAMED$73"
-			quid       	"5D65DEF00135"
-			supplier   	"Logical View::RoleStateManage"
-			quidu      	"5D65DD52023E"
-			is_aggregate 	TRUE)))
 	    (object Class_Category "javax"
 		is_unit    	TRUE
 		is_loaded  	FALSE
@@ -4934,6 +4746,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D56939102ED"
+			compartment 	(object Compartment
+			    Parent_View 	@150
+			    location   	(1075, 995)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	3
+			    max_width  	600
+			    justify    	1)
 			width      	620
 			height     	236
 			annotation 	8
@@ -4965,6 +4795,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5693B10392"
+			compartment 	(object Compartment
+			    Parent_View 	@151
+			    location   	(1763, 995)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	3
+			    max_width  	600
+			    justify    	1)
 			width      	620
 			height     	236
 			annotation 	8
@@ -4996,6 +4844,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5695C80285"
+			compartment 	(object Compartment
+			    Parent_View 	@152
+			    location   	(837, 572)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	275
+			    justify    	1)
 			width      	296
 			height     	186
 			annotation 	8
@@ -5027,6 +4893,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5695EC03E1"
+			compartment 	(object Compartment
+			    Parent_View 	@153
+			    location   	(1349, 572)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	275
+			    justify    	1)
 			width      	296
 			height     	186
 			annotation 	8
@@ -5058,6 +4942,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D56962F0242"
+			compartment 	(object Compartment
+			    Parent_View 	@154
+			    location   	(1765, 572)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	275
+			    justify    	1)
 			width      	296
 			height     	186
 			annotation 	8
@@ -5089,6 +4991,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5696380078"
+			compartment 	(object Compartment
+			    Parent_View 	@155
+			    location   	(2197, 556)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	275
+			    justify    	1)
 			width      	296
 			height     	186
 			annotation 	8
@@ -5160,6 +5080,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5693CB0138"
+			compartment 	(object Compartment
+			    Parent_View 	@160
+			    location   	(969, 188)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	522
+			    justify    	1)
 			width      	544
 			height     	186
 			annotation 	8
@@ -5224,6 +5162,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D5693D202FF"
+			compartment 	(object Compartment
+			    Parent_View 	@164
+			    location   	(1867, 188)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	2
+			    max_width  	422
+			    justify    	1)
 			width      	444
 			height     	186
 			annotation 	8
@@ -5299,6 +5255,24 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D56934903B0"
+			compartment 	(object Compartment
+			    Parent_View 	@168
+			    location   	(1317, 1401)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	16777215
+			    anchor     	2
+			    nlines     	3
+			    max_width  	850
+			    justify    	1)
 			width      	872
 			height     	292
 			annotation 	8
@@ -5391,7 +5365,7 @@
 				supplier   	@160
 				vertices   	(list Points
 				    (780, 298)
-				    (959, 261))
+				    (959, 262))
 				line_style 	0)
 			    (object RoleView "$UNNAMED$52" @175
 				Parent_View 	@173
@@ -5403,7 +5377,7 @@
 				supplier   	@172
 				vertices   	(list Points
 				    (780, 298)
-				    (602, 332))
+				    (602, 334))
 				line_style 	0)))
 		    (object AssociationViewNew "$UNNAMED$53" @176
 			location   	(1211, 52)
@@ -5484,7 +5458,7 @@
 				supplier   	@172
 				vertices   	(list Points
 				    (529, 1308)
-				    (513, 415))
+				    (512, 415))
 				line_style 	0)))))
 	    (object ClassDiagram "状态模式"
 		quid       	"5D58B924007C"
@@ -5882,37 +5856,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::Adaptee" @200
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(2400, 960)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@200
-			    location   	(2224, 879)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	352
-			    justify    	0
-			    label      	"Adaptee")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D6245D20273"
-			width      	370
-			height     	186
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::Adapter" @201
+		    (object ClassView "Class" "Logical View::Adapter" @200
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -5928,7 +5872,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@201
+			    Parent_View 	@200
 			    location   	(1560, 854)
 			    fill_color 	13434879
 			    nlines     	1
@@ -5939,8 +5883,74 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D62458E02C5"
+			compartment 	(object Compartment
+			    Parent_View 	@200
+			    location   	(1560, 915)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	387
+			    justify    	1)
 			width      	386
 			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Adaptee" @201
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2400, 960)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@201
+			    location   	(2224, 879)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	352
+			    justify    	0
+			    label      	"Adaptee")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D6245D20273"
+			compartment 	(object Compartment
+			    Parent_View 	@201
+			    location   	(2224, 940)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	371
+			    justify    	1)
+			width      	370
+			height     	186
 			annotation 	8
 			autoResize 	TRUE)
 		    (object AssociationViewNew "$UNNAMED$62" @202
@@ -5965,7 +5975,7 @@
 				line_color 	3342489
 				quidu      	"5D62460D01C7"
 				client     	@202
-				supplier   	@200
+				supplier   	@201
 				vertices   	(list Points
 				    (2075, 960)
 				    (2214, 960))
@@ -5977,12 +5987,41 @@
 				line_color 	3342489
 				quidu      	"5D62460D01CE"
 				client     	@202
-				supplier   	@201
+				supplier   	@200
 				vertices   	(list Points
 				    (2075, 960)
 				    (1937, 960))
 				line_style 	0)))
-		    (object ClassView "Class" "Logical View::Target" @205
+		    (object ClassView "Class" "Logical View::Client" @205
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1072, 512)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@205
+			    location   	(991, 461)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	162
+			    justify    	0
+			    label      	"Client")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"5D174DA20261"
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Target" @206
 			ShowCompartmentStereotypes 	TRUE
 			IncludeAttribute 	TRUE
 			IncludeOperation 	TRUE
@@ -5998,7 +6037,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@205
+			    Parent_View 	@206
 			    location   	(1458, 453)
 			    fill_color 	13434879
 			    nlines     	1
@@ -6006,7 +6045,7 @@
 			    justify    	0
 			    label      	"Target")
 			stereotype 	(object ItemLabel
-			    Parent_View 	@205
+			    Parent_View 	@206
 			    location   	(1458, 403)
 			    fill_color 	13434879
 			    anchor     	10
@@ -6019,49 +6058,38 @@
 			line_color 	3342489
 			fill_color 	13434879
 			quidu      	"5D62455B0057"
+			compartment 	(object Compartment
+			    Parent_View 	@206
+			    location   	(1458, 514)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	600
+			    justify    	1)
 			width      	590
 			height     	242
 			annotation 	8
 			autoResize 	TRUE)
-		    (object InheritView "" @206
+		    (object InheritView "" @207
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"5D624606011F"
-			client     	@201
-			supplier   	@205
+			client     	@200
+			supplier   	@206
 			vertices   	(list Points
 			    (1744, 841)
 			    (1744, 633))
 			line_style 	0)
-		    (object ClassView "Class" "Logical View::Client" @207
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			location   	(1072, 512)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@207
-			    location   	(991, 461)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	162
-			    justify    	0
-			    label      	"Client")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D174DA20261"
-			height     	126
-			annotation 	8
-			autoResize 	TRUE)
 		    (object AssociationViewNew "$UNNAMED$65" @208
 			location   	(1305, 512)
 			font       	(object Font
@@ -6084,7 +6112,7 @@
 				line_color 	3342489
 				quidu      	"5D62461602BE"
 				client     	@208
-				supplier   	@205
+				supplier   	@206
 				vertices   	(list Points
 				    (1305, 512)
 				    (1448, 512))
@@ -6096,216 +6124,10 @@
 				line_color 	3342489
 				quidu      	"5D62461602C4"
 				client     	@208
-				supplier   	@207
+				supplier   	@205
 				vertices   	(list Points
 				    (1305, 512)
 				    (1162, 512))
-				line_style 	0)))))
-	    (object ClassDiagram "备忘录模式"
-		quid       	"5D65DBFE00A6"
-		title      	"备忘录模式"
-		zoom       	100
-		max_height 	28350
-		max_width  	21600
-		origin_x   	0
-		origin_y   	0
-		items      	(list diagram_item_list
-		    (object ClassView "Class" "Logical View::GameRole" @211
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			ShowOperationSignature 	TRUE
-			location   	(624, 592)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@211
-			    location   	(143, 336)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	962
-			    justify    	0
-			    label      	"GameRole")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D65DD490146"
-			compartment 	(object Compartment
-			    Parent_View 	@211
-			    location   	(143, 397)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	13434879
-			    anchor     	2
-			    nlines     	9
-			    max_width  	1000
-			    justify    	1)
-			width      	980
-			height     	536
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::RoleStateManage" @212
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			ShowOperationSignature 	TRUE
-			location   	(2656, 1088)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@212
-			    location   	(2189, 957)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	934
-			    justify    	0
-			    label      	"RoleStateManage")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D65DD52023E"
-			compartment 	(object Compartment
-			    Parent_View 	@212
-			    location   	(2189, 1018)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	13434879
-			    anchor     	2
-			    nlines     	4
-			    max_width  	968
-			    justify    	1)
-			width      	952
-			height     	286
-			annotation 	8
-			autoResize 	TRUE)
-		    (object ClassView "Class" "Logical View::RoleStateMemento" @213
-			ShowCompartmentStereotypes 	TRUE
-			IncludeAttribute 	TRUE
-			IncludeOperation 	TRUE
-			ShowOperationSignature 	TRUE
-			location   	(1600, 1104)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			label      	(object ItemLabel
-			    Parent_View 	@213
-			    location   	(1224, 773)
-			    fill_color 	13434879
-			    nlines     	1
-			    max_width  	752
-			    justify    	0
-			    label      	"RoleStateMemento")
-			icon_style 	"Icon"
-			line_color 	3342489
-			fill_color 	13434879
-			quidu      	"5D65DC100070"
-			compartment 	(object Compartment
-			    Parent_View 	@213
-			    location   	(1224, 834)
-			    font       	(object Font
-				size       	10
-				face       	"Arial"
-				bold       	FALSE
-				italics    	FALSE
-				underline  	FALSE
-				strike     	FALSE
-				color      	0
-				default_color 	TRUE)
-			    icon_style 	"Icon"
-			    fill_color 	13434879
-			    anchor     	2
-			    nlines     	12
-			    max_width  	784
-			    justify    	1)
-			width      	770
-			height     	686
-			annotation 	8
-			autoResize 	TRUE)
-		    (object UsesView "" @214
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5D65DEDF0050"
-			client     	@211
-			supplier   	@213
-			vertices   	(list Points
-			    (626, 860)
-			    (628, 1106)
-			    (1214, 1104))
-			line_style 	0)
-		    (object AssociationViewNew "$UNNAMED$71" @215
-			location   	(2082, 1096)
-			font       	(object Font
-			    size       	10
-			    face       	"Arial"
-			    bold       	FALSE
-			    italics    	FALSE
-			    underline  	FALSE
-			    strike     	FALSE
-			    color      	0
-			    default_color 	TRUE)
-			stereotype 	TRUE
-			line_color 	3342489
-			quidu      	"5D65DEED03A7"
-			roleview_list 	(list RoleViews
-			    (object RoleView "$UNNAMED$72" @216
-				Parent_View 	@215
-				location   	(-542, 104)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5D65DEF00130"
-				client     	@215
-				supplier   	@213
-				vertices   	(list Points
-				    (2082, 1096)
-				    (1985, 1098))
-				line_style 	0)
-			    (object RoleView "$UNNAMED$73" @217
-				Parent_View 	@215
-				location   	(-542, 104)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5D65DEF00135"
-				client     	@215
-				supplier   	@212
-				vertices   	(list Points
-				    (2082, 1096)
-				    (2179, 1095))
 				line_style 	0)))))))
     root_subsystem 	(object SubSystem "Component View"
 	quid       	"39C9260C00D7"
