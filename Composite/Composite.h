@@ -92,7 +92,7 @@ class FinanceDept : public Company{
 		void Remove(Company* c){}
 		void Display(int depth){
 			for(int i = 0; i < depth; i++)
-				std::cout << "-" << std::endl;
+				std::cout << "-";
 			std::cout << name << std::endl;
 		}
 
