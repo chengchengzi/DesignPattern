@@ -1,8 +1,8 @@
 #ifndef _ACTION
 #define _ACTION
 
-#include""
-
+#include"Person.h"
+#include<typeinfo>
 class Action{
 	public:
 		virtual void GetManConclusion(Man * concreteElementA){};
@@ -11,13 +11,13 @@ class Action{
 
 class Success : public Action{
 	public:
-		void GetManConclusion(Man* concreteElementA);
-		void GetWomanConclusion(Woman* concreteElementB);
+		void GetManConclusion(Person* concreteElementA);
+		void GetWomanConclusion(Person* concreteElementB);
 };
 
 class Failing : public Action{
 	public:
-		void GetManConclusion(Man* concreteElementA);
-		void GetWomanConclusion(Woman* concreteElementB);
+		void GetManConclusion(Person* concreteElementA);
+		void GetWomanConclusion(Person* concreteElementB);
 };
 #endif
