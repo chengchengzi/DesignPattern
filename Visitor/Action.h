@@ -5,8 +5,8 @@
 #include<typeinfo>
 class Action{
 	public:
-		virtual void GetManConclusion(Man * concreteElementA){};
-		virtual void GetWomanConclusion(Woman* concreteElementB){};
+		virtual void GetManConclusion(Person * concreteElementA){};
+		virtual void GetWomanConclusion(Person* concreteElementB){};
 };
 
 class Success : public Action{
